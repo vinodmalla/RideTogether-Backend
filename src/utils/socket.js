@@ -1,7 +1,8 @@
 const socket=require("socket.io"); //importing socket.io module for real-time communication between the server and clients
 const User=require("../models/User"); //importing the User model for interacting with the database to store user information and room details
 const initlizeSocket=(server)=>{ 
-    const io=socket(server,{cors:{origin:"http://localhost:5173"
+    const io=socket(server,{cors:{origin:"https://ride-together-forntend.vercel.app",
+         methods: ["GET", "POST"],
 }});  //creating an instance of socket.io and passing the server as an argument for handling WebSocket connections and cors origin
     let rooms={}; //creating an empty object to store the rooms and their associated clients
     let roomsLocation={}; //creating an empty object to store the rooms and their associated clients location
