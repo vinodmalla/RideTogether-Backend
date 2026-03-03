@@ -10,7 +10,7 @@ const initlizeSocket=require('./utils/socket'); //importing the initlizeSocket f
 const connectDB=require('./config/database'); //importing the connectDB function from the database.js file for connecting to the MongoDB database
 const createRoomRoute=require('./Routes/createroom'); //importing the createRoomRoute from the createroom.js file for handling the route to create a room
 app.use(cors(
-    {origin:"http://localhost:5173",
+    {origin:"https://ride-together-forntend.vercel.app",
         credentials:true
     })); //enabling CORS for all routes
 app.use(express.json()); //enabling JSON parsing for incoming requests
